@@ -1,0 +1,124 @@
+
+INSERT INTO [dbo].[Producto]
+           ([NumeroSerie]
+           ,[Descripcion]
+           ,[Precion]
+           ,[Costo]
+           ,[Imagen]
+           ,[CategoriaId]
+           ,[MarcaId]
+           ,[PadreId])
+     VALUES
+           ('98745','nuevos datos',200,200,null,1,1,null)
+GO
+
+SELECT * FROM dbo.Producto WHERE Producto.MarcaId=2
+
+GO
+
+UPDATE dbo.Producto SET Costo=1991 WHERE Producto.Id=9
+
+
+SELECT * FROM dbo.Producto
+
+DELETE  FROM dbo.Producto WHERE Producto.Id=11
+
+SELECT * FROM dbo.Producto A JOIN dbo.Categoria B on A.CategoriaId=B.Id WHERE A.CategoriaId=2
+
+
+/*
+**
+**  PRINCIPIOS SOLID 
+**
+*/
+
+PRINCIPIO DE RESPONSABILIDAD UNICA 
+	Este principio establece que una clase deve ser responsable solo de una cosa, de lo contrario provocara modificación de otras.
+PRINCIPIO ABIERTO/CERRADO
+	Este principio establece que las clases, modulos y funciones deven ser accesibles desde otra pero sin modificar el contenido.
+PRINCIPIO DE SUBSTRACCION
+	Indica que una subclase puede ser sustituida por la clase padre, lo cual se estaria aplicando la jerarquia.
+
+/*
+**
+**  Indique y defina que comandos se pueden utilizar al combinar dos o más tablas con relación a sus
+columnas.
+**
+*/
+JOIN
+JOIN LEFT
+JOIN RIGHT
+
+/*
+**
+**  Indique y defina que comandos se pueden utilizar al combinar dos o más tablas con relación a sus
+columnas.
+**
+*/
+	SE UTILIZA PARA INCLUIR CONDICIONES CON ALGUNAS FUNCIONES DEL TIPO SUM, MAX
+
+	SELECT columna1, SUM(columna2)
+	FROM tabla
+	GROUP BY columna1
+	HAVING SUM(columna2) < número
+
+
+/*
+**
+** ¿Qué son los métodos EXTENSION en C#? De un ejemplo
+**
+*/
+
+	Estos metodos nos permiten agregar metodos a tipos ya existenten sin crear un nuevo tipo derivado
+	System.Collections.Generic.IEnumerable<T> existentes
+
+/*
+**
+** Desarrolle o declare un objeto anónimo en C# con 3 propiedades diferentes a su elección
+**
+*/
+
+
+	var v = new { Amount = 108, Message = "Hello",Amount2 = 2022 };
+
+
+
+
+
+/*
+**
+** Indique y defina los diferentes niveles de encapsulamiento que se manejan en C# .NET 
+**
+*/
+
+	Public 
+	Private
+	Protected
+	Internal
+	Protected Internal
+
+
+
+/*
+**
+** ¿Qué mecanismos se pueden utilizar para enviar información temporal sin utilizar el modelo en
+ASP.NET MVC? ¿En qué se diferencian cada uno? 
+**
+*/
+
+	ApplicationData.LocalSettings
+	 ApplicationData.LocalFolder
+
+
+
+
+
+
+
+
+
+
+
+
+
+
